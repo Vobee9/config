@@ -1,0 +1,8 @@
+alias gs='git status'
+alias gl='git pull'
+alias gp='git push'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gf='git fetch'
+alias gfo='git fetch origin'
+alias gb= 'git rebase'

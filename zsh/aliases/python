@@ -1,0 +1,7 @@
+alias py="python"
+alias dj='py manage.py'
+alias djm='py manage.py migrate'
+alias djmm='py manage.py makemigrations'
+alias djr='py manage.py runserver localhost:8080'
+alias djs='py manage.py shell'
+alias djt='py manage.py test'

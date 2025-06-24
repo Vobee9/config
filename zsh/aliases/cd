@@ -1,0 +1,12 @@
+for i in {2..3}; do
+  local cd=""
+  local dots=""
+  for _ in {1..$i}; do
+    cd="${cd}../"
+    dots="${dots}."
+  done
+  alias "$dots"="cd $cd"
+done
+alias config="cd $ZDOTDIR/.."
+alias drive="cd $HOME/Library/CloudStorage/SynologyDrive-Drive/"
+alias zenith="cd $HOME/Library/CloudStorage/SynologyDrive-Drive/Code/Zenith"

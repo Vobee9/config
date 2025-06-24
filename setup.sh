@@ -8,17 +8,22 @@
 #     ).'  ).'      )/  )/,__.'    )..-.(   '._,_.'
 #
 
-# colors
-red='\033[1;33m'
-green='\033[1;36m'
-blue='\033[1;32m'
-yellow='\033[1;34m'
-reset='\033[0m'
+CONFIG="$HOME/.vconfig"
+
+# ZSH
+git clone git@github.com:Vobee9/config.git $CONFIG
+echo "export ZDOTDIR=$CONFIG/zsh" | sudo tee -a /etc/zshrc
+
+#SKHD
+brew install koekeishiya/formulae/skhd
+ln -s $CONFIG/skhd/skhd.plist ~/Library/LaunchAgents/skhd.plist
+
+
+#-----------------------------------------------------------------------------------
+
+
 
 # variables
-version=1.0
-folder="$HOME/.dotfiles"
-repository="git@github.com:Vobee9/dotfiles.git"
 version_python="3.10.12"
 
 header() {
@@ -37,7 +42,6 @@ EOF
 title() {
     printf "\n$yellow> $1: $reset\n"
 }
-
 run() {
     local error=${2:-true}
     printf "$yellow|$reset $1\n"

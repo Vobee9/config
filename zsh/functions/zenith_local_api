@@ -1,0 +1,10 @@
+zenith_local_api() {
+    set -a
+    source api/.env
+    source api/services/.env
+    set +a
+    export GPG_TTY=$(tty)
+    export POSTGRES_HOST='localhost'
+    export GDAL_LIBRARY_PATH=/opt/homebrew/lib/libgdal.dylib
+    export GEOS_LIBRARY_PATH=/opt/homebrew/lib/libgeos_c.dylib
+}

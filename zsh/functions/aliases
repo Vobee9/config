@@ -1,0 +1,7 @@
+aliases() {
+    unalias -m '*'
+    setopt LOCAL_OPTIONS NULL_GLOB
+    for f in $ZDOTDIR/aliases/*(N); do
+        source "$f"
+    done
+}
