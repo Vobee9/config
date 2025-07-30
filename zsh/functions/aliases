@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 aliases() {
     unalias -m '*'
     setopt LOCAL_OPTIONS NULL_GLOB

@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+alias zenith='cd $HOME/Documents/ZenithApp'
+alias db='cd .. ; dcu -d db ; cd -; docker ps'
+alias zdbm='function _r() { (cd .. && ./server/scripts/zdbm.sh "$@" && cd -); }; _r'
+alias turnover='curl -X POST https://app.zenith-rh.com/api/turnover -H "Content-Type: application/json" --data @payload.json'

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 alias dsys='docker system df -v'
 alias dps='docker ps'
 alias dcl='docker system prune'

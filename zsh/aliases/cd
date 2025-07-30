@@ -1,12 +1,16 @@
-for i in {2..3}; do
+#!/bin/zsh
+
+for i in {1..9}; do
   local cd=""
   local dots=""
-  for _ in {1..$i}; do
+  for ((j=1; j<=i; j++)); do
     cd="${cd}../"
+  done
+  for ((j=1; j<=(i+1); j++)); do
     dots="${dots}."
   done
   alias "$dots"="cd $cd"
 done
+
 alias config="cd $ZDOTDIR/.."
 alias drive="cd $HOME/Library/CloudStorage/SynologyDrive-Drive/"
-alias zenith="cd $HOME/Library/CloudStorage/SynologyDrive-Drive/Code/Zenith"

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 docker_nuke()
 {
     printf '\033[1;31m\033[1mAre you sure? Type "yes" to proceed:\033[0m '

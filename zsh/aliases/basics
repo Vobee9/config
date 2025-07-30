@@ -1,12 +1,10 @@
+#!/bin/zsh
+
 alias zshrc="vi $ZDOTDIR/.zshrc"
 alias reload="source $ZDOTDIR/.zshrc"
-
 alias h="history"
-
 alias cl='clear'
-
 alias mkdir='mkdir -pv'
-
 alias ls='ls --color=auto -Fh'
 alias l='ls -C'
 alias la='ls -CA'

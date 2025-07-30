@@ -1,8 +1,15 @@
+#!/bin/zsh
+
 alias gs='git status'
-alias gl='git pull'
+alias gsw='git switch'
+alias gl='git log'
+alias gpl='git pull'
+alias gd='git diff'
 alias gp='git push'
-alias ga='git add .'
+alias gpf='git push --force-with-lease'
+alias ga='gs; git add . ;gs'
 alias gc='git commit -m'
+alias gck='git checkout -b'
 alias gf='git fetch'
 alias gfo='git fetch origin'
-alias gb= 'git rebase'
+alias gr='git rebase'
