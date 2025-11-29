@@ -15,6 +15,17 @@ brew install --cask nikitabobko/tap/aerospace
 defaults write -g NSWindowShouldDragOnGesture -bool true
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 
+# agents
+function macos_agent() {
+    local template="$CONFIG/macos/vobee.plist"
+    local target="$HOME/Library/LaunchAgents/com.vobee.plist"
+    [ -f $target ] && rm $target
+    sed "s|__CONFIG__|${CONFIG}|g" "$template" > "$target"
+    launchctl unload "$target" 2>/dev/null
+    launchctl load "$target"
+}
+macos_agent
+
 #-----------------------------------------------------------------------------------
 
 version_python="3.10.12"
@@ -28,5 +39,7 @@ setup_python() {
     run "pyenv versions"
     echo
 }
+# Set up fzf key bindings and fuzzy completion
 
 #setup_python
+brew install fzf bat fd

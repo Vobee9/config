@@ -2,8 +2,8 @@
 
 zenith_local_api() {
     set -a
-    source api/.env
-    source api/services/.env
+    source server/.env
+    source database/.env
     set +a
     export GPG_TTY=$(tty)
     export POSTGRES_HOST='localhost'

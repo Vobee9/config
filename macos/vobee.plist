@@ -4,10 +4,15 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.vobee.zsh</string>
+  <string>com.vobee.aerospace</string>
   <key>ProgramArguments</key>
   <array>
-    <string>__CONFIG__/macos/scripts/env.sh</string>
+    <string>/bin/bash</string>
+    <string>-c</string>
+    <string>
+      __CONFIG__/macos/env.sh
+      open -a AeroSpace
+    </string>
   </array>
   <key>RunAtLoad</key>
   <true/>

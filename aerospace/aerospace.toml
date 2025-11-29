@@ -1,6 +1,8 @@
 # https://nikitabobko.github.io/AeroSpace/guide
+# https://nikitabobko.github.io/AeroSpace/commands
+# https://nikitabobko.github.io/AeroSpace/goodies
 
-enable-normalization-flatten-containers                          = true
+enable-normalization-flatten-containers                         = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 automatically-unhide-macos-hidden-apps                          = true
 accordion-padding                                               = 10
@@ -8,119 +10,112 @@ default-root-container-layout                                   = 'accordion'
 default-root-container-orientation                              = 'vertical'
 #on-focus-changed                                               = ['move-mouse window-lazy-center']
 #on-focused-monitor-changed                                     = ['move-mouse monitor-lazy-center']
-after-startup-command                                           = [
-    'exec-and-forget /Users/vobee/.vconfig/aerospace/scripts/env.sh'
-]
 
 [key-mapping]
-    preset                     = 'qwerty'
+    preset           = 'qwerty'
 [key-mapping.key-notation-to-key-code]
-    w                          = 'z'
-    m                          = 'semicolon'
-    minus                      = 'equal'
+    w                = 'z'
+    m                = 'semicolon'
+    minus            = 'equal'
 
-#[gaps]
-#    inner.horizontal          = 0
-#    inner.vertical            = 0
-#    outer.left                = 0
-#    outer.bottom              = 0
-#    outer.top                 = 0
-#    outer.right               = 0
+[gaps]
+    inner.horizontal = 0
+    inner.vertical   = 0
+    outer.left       = 0
+    outer.bottom     = 0
+    outer.top        = 0
+    outer.right      = 0
 
 [mode.main.binding]
-    alt-shift-r                = 'reload-config'
+    alt-shift-r      = 'reload-config'
     # workspaces
-    alt-0                      = 'flatten-workspace-tree'
-    alt-1                      = 'workspace 1'
-    alt-2                      = 'workspace 2'
-    alt-3                      = 'workspace 3'
-    alt-4                      = 'workspace 4'
-    alt-5                      = 'workspace 5'
-    alt-shift-1                = ['move-node-to-workspace 1', 'workspace 1']
-    alt-shift-2                = ['move-node-to-workspace 2', 'workspace 2']
-    alt-shift-3                = ['move-node-to-workspace 3', 'workspace 3']
-    alt-shift-4                = ['move-node-to-workspace 4', 'workspace 4']
-    alt-shift-5                = ['move-node-to-workspace 5', 'workspace 5']
+    alt-0            = 'flatten-workspace-tree'
+    alt-1            = 'workspace 1'
+    alt-2            = 'workspace 2'
+    alt-3            = 'workspace 3'
+    alt-4            = 'workspace 4'
+    alt-5            = 'workspace 5'
+    alt-shift-1      = ['move-node-to-workspace 1', 'workspace 1']
+    alt-shift-2      = ['move-node-to-workspace 2', 'workspace 2']
+    alt-shift-3      = ['move-node-to-workspace 3', 'workspace 3']
+    alt-shift-4      = ['move-node-to-workspace 4', 'workspace 4']
+    alt-shift-5      = ['move-node-to-workspace 5', 'workspace 5']
     # layouts
-    alt-shift-v                = 'layout v_accordion'
-    alt-shift-h                = 'layout h_accordion'
-    alt-shift-t                = 'layout tiles horizontal vertical'
-    alt-space                  = 'layout floating tiling'
-    alt-shift-b                = 'balance-sizes'
+    alt-shift-v      = 'layout v_accordion'
+    alt-shift-h      = 'layout h_accordion'
+    alt-shift-t      = 'layout tiles horizontal vertical'
+    alt-shift-d      = 'layout floating tiling'
+    alt-shift-b      = 'balance-sizes'
     # focus
-    alt-up                     = 'focus up'
-    alt-down                   = 'focus down'
-    alt-left                   = 'focus left'
-    alt-right                  = 'focus right'
-    alt-tab                    = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
+    alt-up           = 'focus up'
+    alt-down         = 'focus down'
+    alt-left         = 'focus left'
+    alt-right        = 'focus right'
+    alt-tab          = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
     # moves
-    alt-shift-up               = 'move up'
-    alt-shift-down             = 'move down'
-    alt-shift-left             = 'move left'
-    alt-shift-right            = 'move right'
+    alt-shift-up     = 'move up'
+    alt-shift-down   = 'move down'
+    alt-shift-left   = 'move left'
+    alt-shift-right  = 'move right'
     # window
-    alt-f                      = 'fullscreen --no-outer-gaps'
-    alt-shift-f                = 'macos-native-fullscreen'
-    alt-minus                  = 'macos-native-minimize'
-    alt-w                      = 'close'
-    alt-shift-w                = 'close-all-windows-but-current'
+    alt-f            = 'fullscreen --no-outer-gaps'
+    alt-shift-f      = 'macos-native-fullscreen'
+    alt-minus        = 'macos-native-minimize'
+    alt-w            = 'close'
+    alt-shift-w      = 'close-all-windows-but-current'
     # apps
-    alt-enter                  = 'exec-and-forget $CONFIG/aerospace/scripts/app.sh Warp'
-    alt-c                      = 'exec-and-forget $CONFIG/aerospace/scripts/app.sh Calendar'
-    alt-e                      = 'exec-and-forget $CONFIG/aerospace/scripts/app.sh Mail'
-    alt-i                      = 'exec-and-forget $CONFIG/aerospace/scripts/app.sh ChatGPT'
-    alt-m                      = 'exec-and-forget $CONFIG/aerospace/scripts/app.sh SoundCloud'
-    alt-n                      = 'exec-and-forget $CONFIG/aerospace/scripts/app.sh Notes'
-    alt-s                      = 'exec-and-forget $CONFIG/aerospace/scripts/app.sh Safari'
-    alt-x                      = 'exec-and-forget $CONFIG/aerospace/scripts/app.sh Cursor'
+    alt-enter        = 'exec-and-forget open -a Warp'
+    alt-c            = 'exec-and-forget open -a Calendar'
+    alt-e            = 'exec-and-forget open -a Mail'
+    alt-i            = 'exec-and-forget open -a ChatGPT'
+    alt-m            = 'exec-and-forget open -a Music'
+    alt-n            = 'exec-and-forget open -a Notes'
+    alt-s            = 'exec-and-forget open -a Safari'
+    alt-x            = 'exec-and-forget open -a Cursor'
     # modes
-    alt-r                      = 'mode resize'
+    alt-r            = 'mode resize'
 
 [mode.resize.binding]
-    alt-r                      = 'mode main'
-    esc                        = 'mode main'
-    up                         = 'resize height -50'
-    down                       = 'resize height +50'
-    left                       = 'resize width -50'
-    right                      = 'resize width +50'
+    alt-r            = 'mode main'
+    esc              = 'mode main'
+    up               = 'resize height -50'
+    down             = 'resize height +50'
+    left             = 'resize width -50'
+    right            = 'resize width +50'
 
-# apps
 [[on-window-detected]]
-    if.app-id                  = 'com.apple.Safari'
-    run                        = 'move-node-to-workspace 1'
+    if.app-id        = 'com.apple.Safari'
+    run              = 'move-node-to-workspace 1'
 [[on-window-detected]]
-    if.app-id                  = 'com.apple.systempreferences'
-    run                        = 'move-node-to-workspace 1'
+    if.app-id        = 'com.openai.chat'
+    run              = 'move-node-to-workspace 1'
 [[on-window-detected]]
-    if.app-id                  = 'com.apple.finder'
-    run                        = 'move-node-to-workspace 1'
+    if.app-id        = 'com.apple.systempreferences'
+    run              = 'move-node-to-workspace 1'
 [[on-window-detected]]
-    if.app-id                  = 'ch.sudo.cyberduck'
-    run                        = 'move-node-to-workspace 1'
+    if.app-id        = 'com.apple.finder'
+    run              = 'move-node-to-workspace 1'
 [[on-window-detected]]
-    if.app-id                  = 'com.todesktop.230313mzl4w4u92'
-    run                        = 'move-node-to-workspace 2'
+    if.app-id        = 'ch.sudo.cyberduck'
+    run              = 'move-node-to-workspace 1'
 [[on-window-detected]]
-    if.app-id                  = 'dev.warp.Warp-Stable'
-    run                        = 'move-node-to-workspace 3'
+    if.app-id        = 'com.todesktop.230313mzl4w4u92'
+    run              = 'move-node-to-workspace 2'
 [[on-window-detected]]
-    if.app-id                  = 'com.openai.chat'
-    run                        = 'move-node-to-workspace 3'
+    if.app-id        = 'dev.warp.Warp-Stable'
+    run              = 'move-node-to-workspace 3'
 [[on-window-detected]]
-    if.app-id                  = 'com.apple.mail'
-    run                        = 'move-node-to-workspace 4'
+    if.app-id        = 'com.apple.mail'
+    run              = 'move-node-to-workspace 4'
 [[on-window-detected]]
-    if.app-id                  = 'com.tinyspeck.slackmacgap'
-    run                        = 'move-node-to-workspace 4'
+    if.app-id        = 'com.tinyspeck.slackmacgap'
+    run              = 'move-node-to-workspace 4'
 [[on-window-detected]]
-    if.app-id                  = 'com.apple.Safari.WebApp.EF2011F7-A587-419F-819F-E7AA84A0F47B'
-    run                        = 'move-node-to-workspace 4'
+    if.app-id        = 'com.apple.reminders'
+    run              = 'move-node-to-workspace 4'
 [[on-window-detected]]
-    if.app-id                  = 'com.apple.iCal'
-    run                        = 'move-node-to-workspace 5'
+    if.app-id        = 'com.apple.iCal'
+    run              = 'move-node-to-workspace 5'
 [[on-window-detected]]
-    if.app-id                  = 'com.apple.reminders'
-    run                        = 'move-node-to-workspace 4'
-[[on-window-detected]]
-    if.app-id                  = 'com.apple.Notes'
-    run                        = 'move-node-to-workspace 5'
+    if.app-id        = 'com.apple.Notes'
+    run              = 'move-node-to-workspace 5'
