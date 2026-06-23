@@ -32,13 +32,10 @@ functions() {
 functions
 aliases
 eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)"
-
 autoload -Uz compinit
 compinit -d "$ZSH_COMPDUMP"
-
-# Charger fzf (les bindings par défaut seront désactivés dans fzf.zsh)
-source <(fzf --zsh)
-source "$ZDOTDIR/config/fzf.zsh"
 source "$ZINITDIR/zinit.zsh"
-source "$ZDOTDIR/config/options.zsh"
 source "$ZDOTDIR/config/plugins.zsh"
+source "$ZDOTDIR/config/options.zsh"
+source "$ZDOTDIR/config/fzf.zsh"
+source <(fzf --zsh)

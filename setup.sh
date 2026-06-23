@@ -10,13 +10,13 @@ if ! command -v brew >/dev/null; then
 fi
 eval "$(brew shellenv)"
 
-# aerospace
 brew install --cask nikitabobko/tap/aerospace
 defaults write -g NSWindowShouldDragOnGesture -bool true
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 
-# agents
 function macos_agent() {
+CONFIG="$HOME/.vconfig"
+
     local template="$CONFIG/macos/vobee.plist"
     local target="$HOME/Library/LaunchAgents/com.vobee.plist"
     [ -f $target ] && rm $target
@@ -26,10 +26,9 @@ function macos_agent() {
 }
 macos_agent
 
-#-----------------------------------------------------------------------------------
+brew install fzf bat fd rg
 
 version_python="3.10.12"
-
 setup_python() {
     title "Python"
     run "brew list | grep python | xargs brew uninstall --ignore-dependencies"
@@ -39,7 +38,3 @@ setup_python() {
     run "pyenv versions"
     echo
 }
-# Set up fzf key bindings and fuzzy completion
-
-#setup_python
-brew install fzf bat fd

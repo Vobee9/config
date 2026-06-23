@@ -115,7 +115,7 @@ default-root-container-orientation                              = 'vertical'
     run              = 'move-node-to-workspace 4'
 [[on-window-detected]]
     if.app-id        = 'com.apple.iCal'
-    run              = 'move-node-to-workspace 5'
+    run              = 'move-node-to-workspace 3'
 [[on-window-detected]]
     if.app-id        = 'com.apple.Notes'
-    run              = 'move-node-to-workspace 5'
+    run              = 'move-node-to-workspace 3'
