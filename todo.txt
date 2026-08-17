@@ -1,3 +1,0 @@
-zshsessions folder
-all . into config/
-functions/aliases without functions in zhrc

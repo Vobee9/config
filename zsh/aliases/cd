@@ -12,5 +12,5 @@ for i in {1..9}; do
   alias "$dots"="cd $cd"
 done
 
-alias config="cd $ZDOTDIR/.."
+alias config="cd $CONFIG"
 alias drive="cd $HOME/Library/CloudStorage/SynologyDrive-Drive/"

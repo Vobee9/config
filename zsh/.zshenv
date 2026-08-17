@@ -6,14 +6,15 @@ export EDITOR="nano"
 export VISUAL="$EDITOR"
 
 # XDG
-export XDG_CONFIG_HOME="$CONFIG"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
+: "${XDG_CACHE_HOME:=$HOME/.cache}"
+: "${XDG_DATA_HOME:=$HOME/.local/share}"
+export XDG_CACHE_HOME XDG_DATA_HOME
 
-# ZSH
-export ZSH_CACHE_DIR="$ZDOTDIR/.zshcache"
-export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zshcompdump"
-export ZSH_SESSION_SAVE_FILE="$ZDOTDIR/.zshsessions"
+# ZSH runtime
+export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
+export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
+export ZSH_SESSION_SAVE_FILE="$ZSH_CACHE_DIR/session"
+mkdir -p "$ZSH_CACHE_DIR"
 
 # Z
 export ZSHZ_COMPLETION='frecent'

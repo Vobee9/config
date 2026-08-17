@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-alias py="python"
+alias py="uv run"
 alias dj='py manage.py'
 alias djm='py manage.py migrate'
 alias djmm='py manage.py makemigrations'

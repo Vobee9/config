@@ -7,12 +7,9 @@
   <string>com.vobee.aerospace</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/bin/bash</string>
-    <string>-c</string>
-    <string>
-      __CONFIG__/macos/env.sh
-      open -a AeroSpace
-    </string>
+    <string>/Applications/AeroSpace.app/Contents/MacOS/AeroSpace</string>
+    <string>--config-path</string>
+    <string>__CONFIG__/aerospace/aerospace.toml</string>
   </array>
   <key>RunAtLoad</key>
   <true/>

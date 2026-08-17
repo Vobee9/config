@@ -1,0 +1,4 @@
+: "${CONFIG:=$HOME/.vconfig}"
+: "${ZDOTDIR:=$CONFIG/zsh}"
+: "${XDG_CONFIG_HOME:=$HOME/.config}"
+export CONFIG ZDOTDIR XDG_CONFIG_HOME
